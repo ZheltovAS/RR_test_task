@@ -6,7 +6,8 @@ class Organization(models.Model):
     inn = models.CharField(
         max_length=12,
         unique=True,
-        verbose_name="ИНН организации"
+        verbose_name="ИНН организации",
+        db_collation='utf8mb4_bin'
     )
     balance = models.DecimalField(
         max_digits=15,
@@ -29,7 +30,8 @@ class Payment(models.Model):
     """Модель банковского платежа."""
     operation_id = models.UUIDField(
         unique=True,
-        verbose_name="Уникальный ID операции"
+        verbose_name="Уникальный ID операции",
+        editable=False
     )
     amount = models.DecimalField(
         max_digits=12,

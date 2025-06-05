@@ -12,7 +12,7 @@
 ## Технические требования
 - Python 3.9+
 - Django 4.2.17
-- PostgreSQL 14+
+- MySQL 8.0+
 - Django REST Framework 3.15.1
 
 ## API Endpoints

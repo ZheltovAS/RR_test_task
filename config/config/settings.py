@@ -77,12 +77,16 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'your_db_name',
-        'USER': 'your_db_user',
-        'PASSWORD': 'your_db_password',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'bank_payments',
+        'USER': 'mysql_user',
+        'PASSWORD': 'your_password',
         'HOST': 'localhost',
-        'PORT': '5432',
+        'PORT': '3306',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            'charset': 'utf8mb4',
+        }
     }
 }
 
